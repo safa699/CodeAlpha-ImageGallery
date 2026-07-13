@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Image Gallery</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Loader -->
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+
+    <nav>
+
+        <div class="logo">
+            <i class="fa-solid fa-camera-retro"></i>
+            Image Gallery
+        </div>
+
+        <ul>
+
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#gallery">Gallery</a></li>
+
+            <li><a href="#footer">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Creative Image Gallery</h1>
+
+            <p>
+                Discover beautiful images with an elegant,
+                responsive and interactive gallery.
+            </p>
+
+            <a href="#gallery">
+                <button>Explore Gallery</button>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Search -->
+
+    <section class="search-box">
+
+        <input type="text"
+            id="search"
+            placeholder="Search Category...">
+
+    </section>
+
+    <!-- Filter Buttons -->
+
+    <section class="filter">
+
+        <button class="active" onclick="filterSelection('all')">All</button>
+
+        <button onclick="filterSelection('chair')">Chair</button>
+
+        <button onclick="filterSelection('home')">Home</button>
+
+        <button onclick="filterSelection('smile')">Smile</button>
+
+        <button onclick="filterSelection('tree')">Tree</button>
+
+        <button onclick="filterSelection('view')">View</button>
+
+        <button onclick="filterSelection('water')">Water</button>
+
+    </section>
+
+    <!-- Gallery -->
+
+    <section class="gallery" id="gallery">
+
+        <!-- Chair -->
+
+        <div class="card image chair">
+
+            <img src="images/chair1.jpg" alt="Chair">
+
+            <div class="overlay">
+
+                <h3>Modern Chair</h3>
+
+                <p>Comfortable & Stylish</p>
+
+                <div class="icons">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <i class="fa-solid fa-expand"
+                        onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)">
+                    </i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card image chair">
+
+            <img src="images/chair2.jpg" alt="Chair">
+
+            <div class="overlay">
+
+                <h3>Luxury Chair</h3>
+
+                <p>Elegant Design</p>
+
+                <div class="icons">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <i class="fa-solid fa-expand"
+                        onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)">
+                    </i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Home -->
+
+        <div class="card image home">
+
+            <img src="images/home1.jpg" alt="Home">
+
+            <div class="overlay">
+
+                <h3>Modern Home</h3>
+
+                <p>Beautiful Architecture</p>
+
+                <div class="icons">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <i class="fa-solid fa-expand"
+                        onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)">
+                    </i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card image home">
+
+            <img src="images/home2.jpg" alt="Home">
+
+            <div class="overlay">
+
+                <h3>Luxury Home</h3>
+
+                <p>Dream House</p>
+
+                <div class="icons">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <i class="fa-solid fa-expand"
+                        onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)">
+                    </i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Smile -->
+
+        <div class="card image smile">
+
+            <img src="images/smile1.jpg" alt="Smile">
+
+            <div class="overlay">
+
+                <h3>Happy Smile</h3>
+
+                <p>Positive Moments</p>
+
+                <div class="icons">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <i class="fa-solid fa-expand"
+                        onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)">
+                    </i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card image smile">
+
+            <img src="images/smile2.jpg" alt="Smile">
+
+            <div class="overlay">
+
+                <h3>Beautiful Smile</h3>
+
+                <p>Joy & Happiness</p>
+
+                <div class="icons">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <i class="fa-solid fa-expand"
+                        onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)">
+                    </i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Tree -->
+
+        <div class="card image tree">
+            <img src="images/tree1.jpg" alt="Tree">
+            <div class="overlay">
+                <h3>Green Tree</h3>
+                <p>Nature Beauty</p>
+                <div class="icons">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-download"></i>
+                    <i class="fa-solid fa-expand"
+                        onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="card image tree">
+            <img src="images/tree2.jpg" alt="Tree">
+            <div class="overlay">
+                <h3>Forest Tree</h3>
+                <p>Peaceful Nature</p>
+                <div class="icons">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-download"></i>
+                    <i class="fa-solid fa-expand"
+                        onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- View -->
+
+        <div class="card image view">
+            <img src="images/view1.jpg" alt="View">
+            <div class="overlay">
+                <h3>Mountain View</h3>
+                <p>Beautiful Landscape</p>
+                <div class="icons">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-download"></i>
+                    <i class="fa-solid fa-expand"
+                        onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="card image view">
+            <img src="images/view2.jpg" alt="View">
+            <div class="overlay">
+                <h3>Sunset View</h3>
+                <p>Golden Sky</p>
+                <div class="icons">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-download"></i>
+                    <i class="fa-solid fa-expand"
+                        onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Water -->
+
+        <div class="card image water">
+            <img src="images/water1.jpg" alt="Water">
+            <div class="overlay">
+                <h3>Blue Water</h3>
+                <p>Crystal Clear</p>
+                <div class="icons">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-download"></i>
+                    <i class="fa-solid fa-expand"
+                        onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="card image water">
+            <img src="images/water2.jpg" alt="Water">
+            <div class="overlay">
+                <h3>Waterfall</h3>
+                <p>Natural Beauty</p>
+                <div class="icons">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-download"></i>
+                    <i class="fa-solid fa-expand"
+                        onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Lightbox -->
+
+    <div id="lightbox">
+
+        <span class="close">&times;</span>
+
+        <button class="prev">&#10094;</button>
+
+        <img id="lightbox-img">
+
+        <button class="next">&#10095;</button>
+
+        <p id="counter"></p>
+
+    </div>
+
+    <!-- Scroll Button -->
+
+    <button id="topBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+
+    <footer id="footer">
+
+        <h3>Professional Image Gallery</h3>
+
+        <p>Developed using HTML, CSS & JavaScript</p>
+
+        <div class="social">
+
+            <i class="fab fa-facebook"></i>
+
+            <i class="fab fa-instagram"></i>
+
+            <i class="fab fa-linkedin"></i>
+
+            <i class="fab fa-github"></i>
+
+        </div>
+
+        <p>© 2026 All Rights Reserved | Safa Malik</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
